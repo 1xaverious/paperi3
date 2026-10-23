@@ -1,0 +1,35 @@
+# ==========================================
+# PAPER ARTBOOK ZSH CONFIG (i3 & Alacritty)
+# ==========================================
+
+# 1. HISTORY SETTINGS (Anti-Lupa)
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ] || [ "$DBUS_SESSION_BUS_ADDRESS" = "disabled:" ]; then
+    eval $(dbus-launch --sh-syntax)
+fi
+
+setopt SHARE_HISTORY          # Share history antar terminal window
+setopt HIST_IGNORE_DUPS       # Abaikan command ganda berurutan
+setopt HIST_IGNORE_ALL_DUPS   # Hapus duplikat lama
+setopt HIST_IGNORE_SPACE      # Command berawalan spasi gak disimpan
+setopt INC_APPEND_HISTORY     # Langsung tulis ke file detik itu juga
+
+# 2. KEYBINDINGS (Panah Atas/Bawah Search)
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
+
+# 3. AUTO-COMPLETION (Tab Completion Warna-Warni)
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' # Case-insensitive tab completion
+
+PROMPT='%F{#2A2B42}%1~%f %F{#484BA4}❯%f '
+
+# 5. ALIASES UNTUK FLEXIBILITY & SHORTCUTS
+alias ls='ls --color=auto'
+alias ll='ls -la'
+alias c='clear'
+alias v='nvim'
+alias myrecord='ffmpeg -f x11grab -video_size 1920x1080 -i :0.0 -c:v libx264 -preset ultrafast -pix_fmt yuv420p ~/rice_demo_android.mp4'

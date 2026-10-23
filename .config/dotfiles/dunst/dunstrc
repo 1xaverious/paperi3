@@ -1,0 +1,43 @@
+[global]
+    monitor = 0
+    follow = mouse
+    origin = top-right
+    offset = 18x18
+    width = (700, 400)
+    height = 200                
+    indicate_hidden = yes
+    shrink = no
+    separator_height = 2
+    padding = 10
+    horizontal_padding = 15
+    text_icon_padding = 10
+    frame_width = 2
+    
+    # Paper Palette
+    frame_color = "#000000"        # Ink Indigo Border
+    separator_color = "#2A2B42"
+    
+    font = Monospace 10
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    show_age_threshold = 60
+    word_wrap = yes
+    
+    icon_position = left
+    max_icon_size = 48
+
+[urgency_low]
+    background = "#F9F6F0"         # Off-white Paper
+    foreground = "#2A2B42"         # Ink Indigo
+    timeout = 4
+
+[urgency_normal]
+    background = "#F9F6F0"
+    foreground = "#2A2B42"
+    timeout = 6
+
+[urgency_critical]
+    background = "#F9F6F0"
+    foreground = "#D32F2F"
+    frame_color = "#D32F2F"
+    timeout = 0

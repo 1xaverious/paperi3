@@ -1,0 +1,46 @@
+[window]
+padding = { x = 15, y = 15 }
+dynamic_padding = true
+opacity = 1.0
+
+# Pake Default Terminal System Font (Kagak di-override!)
+[font]
+size = 11.0
+
+# --- TWO-TONE COLOR PALETTE (Canvas White + Character Indigo) ---
+[colors.primary]
+background = "#F9F6F0"   # Off-White Canvas Background
+foreground = "#2A2B42"   # Dark Character Outline / Deep Ink Text
+
+[colors.cursor]
+text = "#F9F6F0"
+cursor = "#484BA4"       # Character Indigo Accent
+
+[colors.selection]
+text = "#F9F6F0"
+background = "#484BA4"   # Character Indigo Accent
+
+# SEMUA WARNA TERMINAL (Red, Green, Yellow, Blue, dll)
+# DUKUNG MURNI PAKE GRADASI CHARACTERS INDIGO & INK!
+[colors.normal]
+black   = "#2A2B42"   # Deep Outline Ink
+red     = "#484BA4"   # Character Indigo
+green   = "#484BA4"   # Character Indigo
+yellow  = "#5254B8"   # Lighter Character Highlight
+blue    = "#484BA4"   # Character Indigo
+magenta = "#5254B8"   # Lighter Character Highlight
+cyan    = "#484BA4"   # Character Indigo
+white   = "#EDE8DF"   # Faint Paper Shade
+
+[colors.bright]
+black   = "#6B6D7C"   # Soft Ink Muted
+red     = "#5254B8"   # Lighter Character Highlight
+green   = "#5254B8"   # Lighter Character Highlight
+yellow  = "#484BA4"   # Character Indigo
+blue    = "#5254B8"   # Lighter Character Highlight
+magenta = "#484BA4"   # Character Indigo
+cyan    = "#5254B8"   # Lighter Character Highlight
+white   = "#FFFFFF"   # Pure White
+
+[shell]
+program = "/usr/bin/zsh"
